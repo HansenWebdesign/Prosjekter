@@ -1,0 +1,556 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.centered-title {
+    text-align: center;
+    margin: auto;
+}
+
+.header {
+height: 950px;
+background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../bilder/banner3.jpg);
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+padding-top: 20px;
+text-align: center;
+color: white;
+}
+
+#header-lofoten {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/lofoten.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+#header-henningsvaer {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/henningsvær_banner.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+#header-bodoe {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/Bodo_banner.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+#header-team {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/team.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+#header-msLofoten {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../bilder/skip/cruiseskip2.jpg);
+    height: 600px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+#header-msLofoten h1 {
+    padding-top: 80px;
+}
+
+.navbar img {
+width: 100px;
+}
+
+
+.header h1 {
+padding-top: 260px;
+padding-bottom: 0;
+font-size: 8em;
+}
+.header p {
+    padding-top: 45px;
+    font-size: 3em;
+}
+
+.header p {
+margin: 18px 0;
+}
+
+
+
+/*features*/
+
+.features {
+padding: 100px 0;
+}
+h1 {
+text-align: center;
+padding-bottom: 30px;
+}
+
+.feature-img img
+{
+width: 100%;
+}
+
+.Pris {
+    height: 50px;
+    background: #ff5722;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
+    position: absolute;
+    left: 20px;
+    bottom: -25px;
+}
+
+.feature-img {
+    position: relative;
+}
+
+.rating {
+    padding: 3px;
+    background: white;
+    float: right;
+    right: 0;
+    position: absolute;
+    bottom: -1px;
+}
+
+.features .fa {
+    font-size: 15px;
+    color: #ff5722;
+}
+
+.feature-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.feature-details h4 {
+    font-weight: 550;
+    margin-top: 20px;
+}
+
+.feature-details .fa {
+    margin-right: 5px;
+}
+
+.feature-box {
+    box-shadow: 0 10px 10px 5px rgba(37,73,214,0.18);
+    margin-bottom: 30px;
+}
+
+.gallery {
+padding: 100px 0;
+background: #efefef;
+}
+
+.gallery-box img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.gallery-box img:hover {
+transform: scale(1.1);
+}
+
+.gallery-box h4 {
+    width: 200px;
+    color: white;
+    text-shadow: -1px 1px 1px rgb(0, 0, 0);
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.gallery-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/*Gallery box 1*/
+.gallery-box1 {
+    position: relative;
+    margin-bottom: 30px;  
+}
+.gallery-box1 img {
+    width: 96%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.gallery-box1 img:hover {
+transform: scale(1.1);
+}
+
+.gallery-box1 h4 {
+    width: 200px;
+    color: white;
+    text-shadow: -1px 1px 1px rgb(0, 0, 0);
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin-bottom: 5px;
+ }
+/*Gallery Box 2*/
+
+ .gallery-box2 {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gallery-box2 img {
+    width: 100%;
+    height: 161px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.gallery-box2 img:hover {
+transform: scale(1.1);
+}
+
+.gallery-box2 h4 {
+    width: 100%;
+    color: white;
+    text-shadow: -1px 1px 1px rgb(0, 0, 0);
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    top: 35%;
+    left: 23%;
+    
+ }
+
+ .banner {
+    height: 800px;
+background-image: url(../bilder/banner4.jpg);
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+padding-top: 294px;
+color: white;
+ }
+
+ .banner-highlights {
+padding: 70px 0px;
+background: rgba(0,0,0,0.7);
+text-align: center;
+color: white;
+ }
+
+/* User feedback */
+
+ .users-feedback {
+     padding: 100px 0;
+ }
+
+ .user-review {
+     text-align: center;
+     box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+     padding-bottom: 50px;
+ }
+
+ .user-review p {
+    padding: 50px 10px 10px 10px;
+ }
+
+ .user-review img {
+     padding: 10px;
+ }
+
+ .user-review p::before {
+     content: '\201d';
+     display: block;
+     position: absolute;
+     font-size: 80px;
+     color: #6495ed;
+     font-family: sans-serif;
+     left: 44%;
+     top: 20%;
+ }
+
+ /* Navigation */
+ #navbarText .nav-link {
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+ }
+
+ /* Order button/link */
+.orderButton {
+    background-color: #265788;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    height: 70px;
+    width: 450px;
+    border-radius: 30px;
+    line-height: 66px;
+    margin: auto;
+}
+
+.orderButton:hover {
+    background-color: #726c86;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.orderButton:hover > i{
+    transform: translateX(8px);
+ }
+
+ /* Information page */
+ .main-content {
+    max-width: 1180px;
+    margin: auto;
+    margin-bottom: 80px;
+ }
+
+ .main-content .row {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    width: 100%;
+ }
+
+ .main-content img {
+    margin: auto;
+    width: 100%;
+    max-width: 850px;
+ }
+
+ /* Information list */
+ .info-list {
+    font-style: italic;  
+ }
+
+ .info-list ul {
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #265788;
+    text-align: center;
+    list-style: none;
+ }
+
+ .info-list li {
+    padding: 15px;
+    border-left: 1px solid black;
+ }
+
+ /* Text box with image*/
+ .text-box {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    margin: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 100%;
+ }
+
+ .text-box img {
+     max-width: 300px;
+     width: 100%;
+     float: left;
+     padding: 15px;
+ }
+
+ .text-box-content {
+     margin: auto;
+     text-align: justify;
+ }
+
+ .more-link:hover {
+    text-decoration: none;
+ }
+
+ .more-link:hover > i{
+    transform: translateX(5px);
+ }
+
+ /* Map */
+ .map {
+     height: 400px;
+     width: 100%;
+ }
+
+/* Footer */
+
+.footer {
+    padding: 100px 20px 20px;
+    background-image: linear-gradient(#265788,#726c86);
+    color: white;
+}
+
+.footer-logo {
+    width: 144px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.footer p {
+    font-size: 12px;
+    text-align: justify;
+    padding-right: 35px;
+}
+
+.footer .row .fa {
+    padding-right: 15px;
+    font-size: 12px;
+}
+
+.footer hr {
+    margin-top: 10px;
+    background: #efefef;
+}
+
+.fa-heart {
+    margin: 0 5px;
+    color: #f44336;
+}
+
+.footer .copyright {
+    text-align: center;
+}
+
+.logoText {
+    padding-left: 18px;
+}
+
+/*---------------------Galleri---------------------*/
+
+.lofoten-bilder {
+    display: row;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.lofoten-bilder:hover {
+    filter: grayscale(0);
+}
+.lofoten-bilder h4 {
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.henningsvær-bilder {
+    display: row;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.henningsvær-bilder:hover {
+    filter: grayscale(0);
+}
+.henningsvær-bilder h4 {
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.bodø-bilder {
+    display: row;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.bodø-bilder:hover {
+    filter: grayscale(0);
+}
+.bodø-bilder h4 {
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.lofoten-linje {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    width: 60%;
+    text-align: center;
+    margin: 0 1px 5px 18%;
+}
+.henningsvær-linje {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    width: 60%;
+    text-align: center;
+    margin: 0 1px 5px 18%;
+}
+.bodø-linje {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    width: 60%;
+    text-align: center;
+    margin: 0 1px 5px 18%;
+}
+
+/* Responsiv mobil visning */
+
+@media only screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 3em;
+        margin: 10px;
+    }
+
+    .header p {
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    .header h2 {
+        margin: 10px;
+    }
+
+    .footer {
+        padding: 20px 20px 20px;
+    }
+
+    .main-content .row {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text-box {
+        margin: 0;
+    }
+
+    .orderButton {
+        font-size: 18px;
+    }
+}
