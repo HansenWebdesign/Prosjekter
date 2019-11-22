@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTNU Cruise</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- For jQuery UI Datepicker -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <script src="../script/skjema.js"></script>
+    <script src="../script/dateSelector.js"></script>
+    <script src="../script/queryStringReader.js"></script>
+
+</head>
+<body>
+    <!-- Navigasjon -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html">
+            <img alt="Logo" src="../bilder/NewLogo2.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Hjem</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuDestinations" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reiser</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuDestinations">
+                        <a class="dropdown-item" href="../reiser/lofoten.html">Lofoten</a>
+                        <a class="dropdown-item" href="../reiser/henningsvaer.html">Henningsvær</a>
+                        <a class="dropdown-item" href="../reiser/bodoe.html">Bodø</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuShips" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Skip</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuShips">
+                        <a class="dropdown-item" href="../skip/msLofoten.html">MS Lofoten</a>
+                        <a class="dropdown-item" href="../skip/msBodoe.html">MS Bodø</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Galleri/galleri.html">Galleri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="bestilling.html">Bestill reise <span class="sr-only">(aktiv)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../omOss/omOss.html">Om oss</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sideinnhold -->
+
+    <div class="main-content">
+        <div class="row">
+            <div class="text-box">
+                <div class="text-box-content">
+                    <h4 id="cruiseDestination">Bestill din reise</h4>
+                </div>
+            </div>
+        </div>
+
+    <!-- Skjema -->
+
+    <div class="row">
+        <form id="reiseform" class="skjema" action="http://www.iie.ntnu.no/fag/webutvikling1/prosjekt/behandle.php" method="post">
+
+        *<b>Fornavn:</b>
+        <br>
+        <input type="text" name="Fornavn" size="20" required>
+        <br>
+        <br>
+        *<b>Etternavn:</b>
+        <br>
+        <input type="text" name="Etternavn" size="20" required>
+        <br>
+        <br>
+        <br>
+        *<b>Antall reisende:</b><br>
+           Voksne:
+        <select id="antall_voksne" name="Antall voksne som reiser"
+        onchange="calculateTotal()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        </select>
+           Barn (1 til 16 &aring;r):
+           <select id="antall_barn" name="Antall barn som reiser"
+           onchange="calculateTotal()">
+         <option>0</option>
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+         <option>6</option>
+        </select>
+        <br>
+        <br>
+           Student:
+        <select id="antall_student" name="Antall studenter som reiser"
+        onchange="calculateTotal()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        </select>
+           Honn&oslash;r:
+        <select id="antall_honnor" name="Antall honn&oslash;rer som reiser"
+        onchange="calculateTotal()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        </select>
+        <br>
+        <br>
+        <br>
+
+        *<b>Destinasjon:</b>
+        <select id="cruisetype" name="Cruisetype">
+          <option value="" disabled selected>Velg destinasjon</option>
+          <option value="1">Lofoten</option>
+          <option value="2">Henningsvær</option>
+          <option value="3">Bodø</option>
+        </select>
+        <br>
+        <br>
+
+        <b>Type Lugar:</b>
+        <select id="type_lugar" name="Type lugar"
+        onchange="calculateTotal()">
+        <option selected>Standard</option>
+        <option>Luxury</option>
+        <option>Superior</option>
+        </select>
+        <br>
+        <br>
+        <b>
+        Antall lugarer er normalt 1-4 personer pr lugar.
+        <br>
+        Ved spesielle behov eller reise med sm&aring; barn,
+        <br>
+        noter dette i kommentarfeltet under.</b>
+        <br>
+        <br>
+        <br>
+            <b>Velg dato</b><span> (destinasjon må være valgt)</span><b>:</b>
+            <br>
+            <input type="text" class="datepicker" id="datepicker-lofoten" required onchange="calculateTotal()" placeholder="dd/mm/yyyy">
+            <br>
+            <br>
+            <b>Tilgjengelig reise basert på valgt dato:</b>
+            <br>
+           <span>Fra </span>
+           <input id="start" type="text" name="Start dato" size="10" required onchange="calculateTotal()" placeholder="dd/mm/yyyy" readonly>
+           <span> til </span>
+           <input id="slutt" type="text" name="Slutt dato" size="10" required onchange="calculateTotal()" placeholder="dd/mm/yyyy" readonly>
+        <br>
+        <div id="antalldager"></div>
+        <!--Gjemt input, denne faktoren vil bli brukt til utregning i JS-->
+        <input type="hidden" name="Antall reisedager" id="antall_dager" style="width: 100px;" onchange="calculateTotal()">
+        <br>
+        <br>
+          *<b>E-mail:</b>
+        <input type="email" name="epost" size="40" required>
+        <br>
+        <br>
+        <b>Telefon:</b>
+        <input type="tel" name="Telefon" size="15" minlength="8" maxlength="8"> (Valgfritt)
+        <br>
+        <br>
+        <br>
+        <b>Har du SAS Eurobonus eller Choice Club?</b>
+        <br>
+        <input type="radio" name="Bonus" value="Nei" id="nei" checked onclick="calculateTotal()"><label for="nei">Ingen av delene</label>
+        <br>
+        <input type="radio" name="Bonus" value="SAS Bonus" id="sas_bonus" onclick="calculateTotal()"><label for="sas_bonus">SAS Eurobonus</label>
+        <br>
+        <input type="radio" name="Bonus" value="Choice Club" id="cc_bonus" onclick="calculateTotal()"><label for="cc_bonus">Choice Club</label>
+        <br>
+          Skriv inn ditt kundenummer:
+          <input name="Kundenummer" type="text" id="kundenummer" size="15" minlength="7" maxlength="7" required>
+          <br>
+          <br>
+          <b>Totalpris:</b>
+          <br>
+          <input type="text" name="Totalpris i kr" id="totalpris" style="width: 100px;" onchange="calculateTotal()">
+          <br>
+          <br>
+          <b>Kommentarer eller andre beskjeder i bestillingen:</b>
+          <br>
+          <input type="text" name="Notat" id="notat" style="width: 300px; height: 50px; ">
+          <br>
+          <br>
+          <input type="submit" name="Submit" id="submit" value="Neste/til betaling">
+          <input type="reset" name="reset" value="T&oslash;m alle felt">
+        </form>
+    </div>
+
+    <div class="row">
+        <b>*M&aring; fylles ut*</b>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img alt="Logo" src="../bilder/NewLogo2.png" class="footer-logo">
+                    <p>Norges Beste Cruise</p>
+                </div>
+                <div class="col-md-4">
+                        <h4>Kontakt Oss</h4>
+                        <p><i class="fa fa-phone-square"></i> +47 999 88 777</p>
+                        <p><i class="fa fa-envelope"></i> kontakt@ntnucriuse.no</p>
+                        <p><i class="fa fa-home"></i> ntnu gata 35C, 9999 Trondheim</p>
+                </div>
+                <div class="col-md-4">
+                        <h4>Følg oss</h4>
+                        <p><i class="fa fa-facebook-official"></i> Facebook.no/ntnucriuse</p>
+                        <p><i class="fa fa-youtube-play"></i> YouTube/ntnucruise</p>
+                        <p><i class="fa fa-twitter"></i> twitter.no/ntnucruise</p>
+                </div>
+            </div><hr>
+            <p class="copyright">Made with <i class="fa fa-heart"></i> av denne studentgruppa</p>
+        </div>
+    </section>
+</body>
+
+
+
+</html>
